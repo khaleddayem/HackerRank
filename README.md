@@ -1,5 +1,5 @@
-# HackerRank
-Some of my HackerRank Soultions
-## my contacts
-mail : kh.dayem@gmail.com
-phone : +201227582479
+# **HackerRank**
+### Some of my Favourite HackerRank Soultions
+# **My contacts**
+### MAIL : kh.dayem@gmail.com
+### PHONE : +201227582479
