@@ -21,24 +21,24 @@
 
 /* MACRO SECTION */
 
-#define MAX_DIGIT 10
-#define ASCII_OF_0 48
+#define    MAX_DIGIT      10
+#define    ASCII_OF_0     48
 
 /* MAIN BODY */
 
 int main(){
     char* str;
     int iter=0;                             /* Used for printing the Freq array LOOP */
-	int freq[MAX_DIGIT]={0};                       /* Creating an Array of 0's for the freq */
+    int freq[MAX_DIGIT]={0};                /* Creating an Array of 0's for the freq */
 	
     str=malloc(1024 * sizeof(char));        /* Allocating memory for the string */
-    scanf("%s",str);					    /* Scanning the string from the user */
+    scanf("%s",str);			    /* Scanning the string from the user */
     str=realloc(str, strlen(str) + 1);      /* Reallocating the memory to free Unused memory */
     while(*str!='\0')                       /* Looping through the string till the null char */
     {
         
-        freq[*str-ASCII_OF_0]++;			/* Converting the numbers of Char to int by subtracting the ascii of zero (48) */
-        str++;								/* incrementing the value in the corresponding index to the number in string */
+        freq[*str-ASCII_OF_0]++;	    /* Converting the numbers of Char to int by subtracting the ascii of zero (48) */
+        str++;				    /* incrementing the value in the corresponding index to the number in string */
     }
     for(iter=0;iter<MAX_DIGIT;iter++)       /* looping to print the array */
     {
