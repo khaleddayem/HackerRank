@@ -6,8 +6,8 @@
 * Author github         : https://github.com/khaleddayem
 
 * Problem Description   : You are given  triangles, specifically, their sides ,
-						  Print them in the same style 
-						  but sorted by their areas from the smallest one to the largest one. 
+			  Print them in the same style 
+			  but sorted by their areas from the smallest one to the largest one. 
 
 * Problem Link          : https://www.hackerrank.com/challenges/small-triangles-large-triangles
 
@@ -31,27 +31,27 @@ typedef struct triangle triangle;
 /* Sort an array a of the length n */
 void sort_by_area(triangle* tr, int n) {
 
-	/* Used to iterate through the loops */
+    /* Used to iterate through the loops */
     int i,j;
 	
-	/* S is an array to store the AREAS */
-	/* You can find the math formulas in the problem page */
+    /* S is an array to store the AREAS */
+    /* You can find the math formulas in the problem page */
     double *s,p=0;
 	
-	/* Using calloc to make a dynamic array of zeros */
+    /* Using calloc to make a dynamic array of zeros */
     s=(double*)calloc(n, sizeof(double));
 	
-	/* Used for swapping */
+    /* Used for swapping */
     triangle temp;
 	
-	/* Loop to calculate the areas of the given triangles in the S array */
+    /* Loop to calculate the areas of the given triangles in the S array */
     for(i=0;i<n;i++)
     {
         p=(tr[i].a+tr[i].b+tr[i].c)/2.0;
         s[i]=sqrt(p*(p-tr[i].a)*(p-tr[i].b)*(p-tr[i].c));
     }
 	
-	/* Simple Bubble sort */
+    /* Simple Bubble sort */
     for(i = 0; i < n ; ++i)
     {
         for(j = i+1; j < n; ++j)
